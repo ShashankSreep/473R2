@@ -10,6 +10,8 @@ mcp = FastMCP("weather")
 NWS_API_BASE = "https://api.weather.gov"
 USER_AGENT = "weather-app/1.0"
 
+
+# Helper function to make requests to the NWS API
 async def make_nws_request(url: str) -> dict[str, Any] | None:
     """Make a request to the NWS API with proper error handling."""
     headers = {
@@ -35,6 +37,8 @@ Description: {props.get('description', 'No description available')}
 Instructions: {props.get('instruction', 'No specific instructions provided')}
 """
 
+
+# Tool that gets weather alerts for a US state
 @mcp.tool()
 async def get_alerts(state: str) -> str:
     """Get weather alerts for a US state.
@@ -54,6 +58,8 @@ async def get_alerts(state: str) -> str:
     alerts = [format_alert(feature) for feature in data["features"]]
     return "\n---\n".join(alerts)
 
+
+# Tool that gets the current temperature for a location given its latitude and longitude
 @mcp.tool()
 async def get_forecast(latitude: float, longitude: float) -> str:
     """Get weather forecast for a location.
@@ -111,6 +117,8 @@ def divide(a: int, b: int) -> float:
     """Divide two numbers."""
     return a / b
 
+
+# Retireve the current price of a stock using the Yahoo Finance API
 @mcp.tool()
 def get_stock_price(ticker: str) -> float:
     """Get the current price of a stock."""

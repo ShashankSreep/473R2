@@ -7,7 +7,7 @@ from contextlib import AsyncExitStack
 from mcp import ClientSession, StdioServerParameters
 from mcp.client.stdio import stdio_client
 
-
+# Create a client class to interact with the MCP server
 class MCPClient:
     def __init__(self):
         """Initialize the MCP client."""
@@ -55,6 +55,9 @@ class MCPClient:
         ]
         print("\nConnected to server with tools:", [tool["function"]["name"] for tool in self.tools])
 
+
+    # Process a user query using Llama and available tools
+    # Invoked when the user types a query in the chat loop => For each query, the client calls process_query
     async def process_query(self, query: str) -> str:
         """Process a user query using Llama and available tools."""
         messages = [{
@@ -109,6 +112,9 @@ class MCPClient:
 
         return "\n".join(final_text)
 
+
+    # Runs the chat loop
+    # The loop ends when the user types 'quit'
     async def chat_loop(self):
         """Run an interactive chat loop."""
         print("\nMCP Client Started!")
