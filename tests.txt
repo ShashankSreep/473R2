@@ -1,0 +1,91 @@
+// Format
+// 1: Input Query => This is the query the user will Input
+// 2: Output Result => This is the output of the LLM
+
+////////////////////
+Model: llama3.1 ////
+////////////////////
+
+
+First, we will do 5 queries that demonstrate results without the tool integration
+
+Input_1 = "What is the current weather in Seattle?"
+Output_1 = However, I'm a large language model, I don't have real-time access to current weather conditions. But I can suggest some options for you to find out the current weather in Seattle:
+
+1. **Check online weather websites**: You can visit websites like AccuWeather, Weather.com, or the National Weather Service (NWS) website to get the current weather conditions and forecast for Seattle.
+2. **Use a mobile app**: Download the Dark Sky app (iOS, Android), Weather Underground app (iOS, Android), or other similar apps that provide real-time weather information.
+3. **Check a search engine**: Simply type "Seattle weather" into a search engine like Google, Bing, or Yahoo to get current and forecasted weather conditions.
+
+Please note that my knowledge cutoff is September 2022, so I may not have the most up-to-date information on current weather conditions in Seattle.
+
+
+Input_2 = "Is the weather in Seattle colder than the weather in Dallas right now?"
+Output_2 = Unfortunately, I don't have real-time access to current temperature data for both cities. However, I can give you a general idea of the typical temperature ranges for each city and help you estimate which one 
+is likely to be colder.
+
+**Seattle, Washington:**
+
+* Winters (December to February): 35°F - 45°F (2°C - 7°C)
+* Average temperature in January (the coldest month): around 42°F (6°C)
+
+**Dallas, Texas:**
+
+* Winters (December to February): 40°F - 55°F (4°C - 13°C)
+* Average temperature in January (the coldest month): around 48°F (9°C)
+
+Based on these general temperature ranges, Dallas is likely to be warmer than Seattle during the winter months. However, please note that this is just an estimate and actual temperatures can vary from year to 
+year.
+
+To get a more accurate answer, I recommend checking current weather conditions for both cities using online resources or mobile apps, as I mentioned earlier. This will give you a better idea of which city has 
+colder weather currently.
+
+
+
+Input_3 = "What is the stock price of Apple currently?"
+Output_3 = However, I'm a large language model, I don't have real-time access to current stock prices. But I can suggest some options for you to find out the current stock price of Apple:
+
+1. **Check a financial website**: Visit websites like Yahoo Finance (finance.yahoo.com), Google Finance (finance.google.com), or Bloomberg (bloomberg.com) to get the current stock price and other relevant 
+information.
+2. **Use a mobile app**: Download apps like Yahoo Finance, Google Finance, or Microsoft's Stocks app (for iOS devices) to get real-time stock prices and other market data.
+3. **Check Apple's investor relations website**: Visit Apple's official investor relations website at investor.apple.com to find the current stock price and other relevant information.
+
+Please note that my knowledge cutoff is September 2022, so I may not have the most up-to-date information on Apple's current stock price.
+
+
+Input_4 = "Suppose we take the current stock price of Amazon and current stock price of Apple. Which is larger?"
+Output_4 = I can help you with that! However, I'll need to provide an estimate based on historical data, as I don't have real-time access to current stock prices.
+
+To give you a general idea, here are the average closing stock prices for Apple and Amazon over the past few months (as of my knowledge cutoff in September 2022):
+
+* **Apple (AAPL)**: around $150-$160 per share
+* **Amazon (AMZN)**: around $190-$200 per share
+
+Please keep in mind that these are rough estimates based on historical data, and actual stock prices may have changed since then.
+
+
+
+Input_5 = "Based on the temperature in Seattle currently, should I plan to wear a coat?"
+Output_5 = As we discussed earlier, I don't have real-time access to current weather conditions. However, based on our previous conversation about Seattle's typical winter temperatures, it's likely that you'll want to 
+dress warmly if you're planning to visit or live in Seattle during the winter months.
+
+
+
+// Now, we will run these same 5 queries with the integration and show the results ///////////
+Output_1* = "It looks like it's going to be a rainy weekend in Seattle! 
+            According to the forecast, today will see a chance of rain with mostly cloudy skies and a high near 53°F. 
+            Tonight and Saturday will likely see more significant rain showers, with highs around 49°F and lows around 40-41°F."
+
+Output_2* = "According to the forecast, 
+            tonight's temperature in Seattle is 41°F and in Dallas it's 57°F, 
+            so the weather in Seattle is indeed colder than the weather in Dallas right now."
+
+Output_3* = "The current stock price of Apple is $213.49. Would you like to know any other information about Apple's stock performance?"
+
+Output_4* = "The current stock price of Apple ($213.49) is larger than the current stock price of Amazon ($197.95)."
+
+Output_5* = "Based on the forecast, it appears that it will be chilly in Seattle over the next few days, especially at night. 
+            On Saturday Night, the temperature is expected to drop down to around 40°F.
+            For today (Friday), you might want to consider wearing a light jacket or 
+            sweater since the high temperature is only going to be around 53°F and there's a chance of rain.
+            But for a coat specifically, it might not be necessary for this evening or tonight. 
+            You could probably get away with a lightweight layer on your upper body."
