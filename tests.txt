@@ -89,3 +89,20 @@ Output_5* = "Based on the forecast, it appears that it will be chilly in Seattle
             sweater since the high temperature is only going to be around 53°F and there's a chance of rain.
             But for a coat specifically, it might not be necessary for this evening or tonight. 
             You could probably get away with a lightweight layer on your upper body."
+
+
+
+
+// Now, we will test regular queries i.e. queries that work for both models (General Knowledge)
+Query_1 = "What is the capital of France"
+Output_1 = "The capital of France is Paris."
+Output_1* = "The capital of France is Paris."
+
+
+Query_2 = "What is 5^2?"
+Output_2 = "5^2 is 25"
+Output_2* = "To calculate this, you can multiply 5 by itself: 5x5 = 25"
+
+Query_3 = "What is the largest country in the world?"
+Output_3 = "Russia is generally considered the largest country in the world."
+Output_3* = "Russia is the largest country in the world. It spans ... 6.6 million square miles.
